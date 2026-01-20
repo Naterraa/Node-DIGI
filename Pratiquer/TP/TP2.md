@@ -1,4 +1,4 @@
-TP 2 : Création d'une API avec Express.js et sqlite 
+TP 2 : Création d'une API avec Express.js et sqlite et sequelize
 
 Objectif : Créer une API complète pour gérer une bibliothèque de livres en utilisant Express.js et sqlite, en implémentant toutes les opérations CRUD. 
 
@@ -44,6 +44,8 @@ Ajouter la recherche :
 - Permettre la recherche par titre, auteur ou ISBN 
 - Implémenter la recherche partielle (LIKE) 
 
+
+BONUS :
 
 - Ajouter les statistiques : 
 
