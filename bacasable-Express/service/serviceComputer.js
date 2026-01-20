@@ -1,26 +1,12 @@
-listeComputer = [{
-    id: 1,
-    marque: "Asus",
-    prix: 1000
-},
-{
-    id: 2,
-    marque: "Dell",
-    prix: 1500
-}]
-
+const Computer = require('../models/computerModel');
 
 const service = {
-    getAll: () => {
-        return listeComputer
+    getAll: async () => {
+        return await Computer.findAll();
     },
-    create: (computer) => {
-        // Aucune notion de validation = je pourrai ce que je veux dans mon create dans mon body et ça l'ajouterai 
-        // à la liste
-        // Plus tard on fera un middleware
-        listeComputer.push(computer)
-        return computer
+    create: async (computerData) => {
+        return await Computer.create(computerData);
     }
-    // update getOne delete
-}
-module.exports = service
+};
+
+module.exports = service;
