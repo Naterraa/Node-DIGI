@@ -3,6 +3,10 @@ const app = express();
 const { connectDB } = require('./db/sequelize/db');
 const routerComputer = require('./router/routerComputer');
 const routerPark = require('./router/routerPark');
+const authRouter = require('./router/authRouter');
+
+require("dotenv").config();
+
 
 // Important utiliser json 
 app.use(express.json());
@@ -10,8 +14,10 @@ app.use(express.json());
 // Initialiser la BDD
 connectDB();
 
+app.use('/api/auth', authRouter);
 app.use('/api/computer', routerComputer);
 app.use('/api/park', routerPark);
+
 
 
 

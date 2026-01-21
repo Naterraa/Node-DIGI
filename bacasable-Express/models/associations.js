@@ -1,5 +1,6 @@
 const Computer = require('./computerModel');
 const Park = require('./parkModel');
+const User = require('./userModel');
 
 // Relation 1:N - Un Park peut avoir plusieurs Computers
 Park.hasMany(Computer, {
@@ -13,4 +14,5 @@ Computer.belongsTo(Park, {
     as: 'park'
 });
 
-module.exports = { Computer, Park };
+module.exports = { Computer, Park, User };
+
